@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: lightblue;
+}
+
+header{
+background-color: black;
+position: fixed;
+width: 100%;
+}
+
+h1{
+    font-size: 3,5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 15px;
+}
+ul{
+    list-style: none;
+}
+li{
+    font-size: 15px;
+}
+
+
+a:visited,a:link,a:active {
+    color:lightblue;
+    text-decoration: none;
+}
+
+.container{
+max-width: 1400px;
+margin: auto;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    Color:rgb(50, 119, 248);
+    font-size: 1.35em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+display: row;
+text-align: center;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(50, 119, 248);
+}
+
+header a:hover{
+    color: rgb(50, 119, 248);
+}
+
+#Hero{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+)
+,url("media/logo.png");
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+#Hero h2{
+    font-size: 1.5em;
+}
+
+#Quienessomos{
+display: flex;
+align-items: center;
+justify-content: left;
+text-align: center;
+flex-direction: column;
+padding: 100px 12px;
+}
+
+#Nuestros-servicios{
+    background-color: black;
+    color: rgb(192, 230, 243);
+    text-align: center;
+}
+
+#Nuestros-servicios p{
+    display: none;
+}
+
+#Nuestros-servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/despachante.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/logistica.jpg");
+
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/transporte.jpg");
+
+}
+
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/clasificacion.png");
+
+}
+
+#Clientes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    }
+
+#Contacto{
+display: flex;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/fondocontacto.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+
+#Contacto .container{
+flex-direction: row;
+}
+
+#Contacto h3{
+    margin-left: 60px;
+}
+
+#Contacto ul{
+    margin-left: 20px;
+
+}
+
+footer{
+    background-color: rgb(25, 25, 25);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0%;
+    }
+
+    #Hero h2{
+        font-size: 2.7em;
+    }
+
+    #Nuestros-servicios .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #Nuestros-servicios p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #Nuestros-servicios h3{
+        margin-top: 0;
+    }
+
+    #Nuestros-servicios .carta{
+        padding: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/despachante.jpg");
+    }
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/logistica.jpg");
+    }
+    
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/transporte.jpg");
+    }
+    
+    .carta:nth-child(4){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/clasificacion.png");
+    }
+
+    .mapa{
+        width: 300px;
+    }
+}
