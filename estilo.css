@@ -13,10 +13,6 @@ body{
     color: lightblue;
 }
 
-header{
-width: 100%;
-}
-
 h1{
     font-size: 3,5em;
 }
@@ -50,14 +46,10 @@ margin: auto;
 flex-direction: column;
 }
 
-.containermapa{
-    max-width: 1400px;
-    margin: auto;
-    }
-
 img{
     height: 100%;
 }
+
 
 .toggle-menu{
     height: 40px;
@@ -76,8 +68,8 @@ header{
     );
     position: fixed;
     width: 100%;
+    max-width: 1400px;
     }
-    
 
 .main-menu {
 display: flex;
@@ -87,8 +79,12 @@ transition: transform 0.3s;
 transform: translateY(-100%);
 }
 
+.main-nav{
+    max-width: 1400px;
+}
+
 .menu_item {
-    padding: 1em;
+    padding: 10px;
 }
 
 .main-menu--show {
@@ -137,6 +133,7 @@ padding: 100px 12px;
 }
 
 #Nuestros-servicios{
+    display: flex;
     background-color: black;
     color: rgb(192, 230, 243);
     text-align: center;
@@ -194,16 +191,25 @@ padding: 100px 12px;
 
 }
 
-#Clientes{
+.carta h3, p{
+    background-color: rgba(0, 0, 0, 0.600);
+    border:double rgba(0,0,0);
+    border-radius: 10px;
+}
+
+#CotizaTuEnvio{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto; 
     text-align: center;
-    flex-direction: column;
-    height: 80vh;
     }
 
+#datos{
+    height: 100%;
+}
+
+
 #Contacto{
+    text-align: center;
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.6),
@@ -211,7 +217,7 @@ padding: 100px 12px;
     )
     ,url("media/fondocontacto.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -228,9 +234,9 @@ footer{
 }
 
 footer p{
+    color: rgb(192, 230, 243);
     margin: 0;
     padding: 12px;
-    color: rgb(100,100,100);
 }
 
 footer .container{
@@ -242,13 +248,17 @@ footer .container{
 
 @media (min-width: 720px){
 
+header{
+background-color: rgb(25, 25, 25);
+}
+
 .main-menu{
     flex-direction: row;
     transform: translateY(0);
 }
 
 .toggle-menu{
-    cursor: none;
+    cursor: default;
 }
 
     #Hero h2{
@@ -312,6 +322,7 @@ footer .container{
         ,url("media/clasificacion.png");
     }
 
+    
     #Contacto{
         background-image: linear-gradient(
             0deg,
