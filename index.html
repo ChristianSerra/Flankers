@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
+    <div class="container">
+        <header>
             <nav class="main-nav">
                 <div id="toggle-menu" class="toggle-menu">
                     <img src="media/logochico2.png" alt="logo">
@@ -22,16 +22,17 @@
                 <ul id="main-menu" class="main-menu">
                     <li class="menu_item"><a href="#Quienessomos"class="main-menu_link">Quienes Somos</a></li>
                     <li class="menu_item"><a href="#Nuestros-servicios"class="main-menu_link">Nuestros Servicios</a></li>
-                    <li class="menu_item"><a href="#Clientes"class="main-menu_link">Clientes</a></li>
+                    <li class="menu_item"><a href="#CotizaTuEnvio"class="main-menu_link">Cotizalo</a></li>
                     <li class="menu_item"><a href="#Contacto"class="main-menu_link">Contacto</a></li>
+                    <li class="menu_item"><a href="http://dux.flankers.com.ar:50850/dux/XZS001P001.aspx"class="main-menu_link" target="_blank">Acceso Web Clientes</a></li>                   
                 </ul>
             </nav>
             <script src="scripts.js"></script>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <section id="Hero">
-        <h2 .Hero>Asesores en Comercio Exterior <br> y Despacho Aduanero</h2>
+        <h2 .Hero>Asesores en Comercio Exterior <br> & <br> Despacho Aduanero</h2>
     </section>
 
     <section id="Quienessomos">
@@ -53,7 +54,7 @@
             <div class="servicios">
                 <div class="carta">
                     <h3>Servicios Despachante de Aduanas</h3>
-                    <p>Mas de 20 años de trayectoria en la actividad nos avalan. Brindamos una amplia gama de Servicios Aduaneros, con un Equipo de trabajo altamente Profesional y calificado, logrando así proveer las mejores soluciones de exportación e importación para su mercadería.  Gestionamos los requerimientos y tramitaciones necesarias de terceros organismos intervinientes en la nacionalización o exportación de su mercadería. Coordinamos sus entregas con los terceros intervinientes. Cuidamos la operativa evitando extra costos reduciendo el tiempo de entrega. Analizamos la mejor operativa brindado un servicio a sus necesidades</p>
+                    <p>Mas de 20 años de trayectoria en la actividad nos avalan. Brindamos una amplia gama de Servicios Aduaneros, con un Equipo de trabajo altamente Profesional y calificado, logrando así proveer las mejores soluciones de exportación e importación para su mercadería.  Gestionamos los requerimientos y tramitaciones necesarias de terceros organismos intervinientes en la nacionalización o exportación de su mercadería. Coordinamos sus entregas con los terceros intervinientes. Cuidamos la operativa evitando extra costos reduciendo el tiempo de entrega. Analizamos la mejor operativa brindado un servicio a sus necesidades.</p>
                 </div>
                 <div class="carta">
                     <h3>Servicio Logístico Internacional</h3>
@@ -65,7 +66,7 @@
                     Fraccionamiento de cargas
                     Coordinación de embarques
                     Contratación de seguros
-                    Servicio de descarga en sus distintas modalidades</p>
+                    Servicio de descarga en sus distintas modalidades.</p>
                 </div>
                 <div class="carta">
                     <h3>Servicios de Transporte Global</h3>
@@ -73,20 +74,67 @@
                 </div>
                 <div class="carta">
                     <h3>Clasificación Arancelaria</h3>
-                    <p>Este servicio provee la correcta codificación del producto en consulta, en el Sistema Armonizado de Designación y Codificación de Mercaderías, expresado en la versión de uso actual en la República Argentina. (arancel SIM a 11 digitos)</p>
+                    <p>Este servicio provee la correcta codificación del producto en consulta, en el Sistema Armonizado de Designación y Codificación de Mercaderías, expresado en la versión de uso actual en la República Argentina. (arancel SIM a 11 digitos).</p>
                 </div>
             </div>      
         </div>
     </section>
 
-    <section id="Clientes">
+    <section id="CotizaTuEnvio">
         <div class="container">
-            <h2>Nuestros Clientes</h2>
-            <img src="img/ejemplo.png" alt="Empresas">
+            <h2>Cotizá tu envío</h2>
+            <div class="containerFormulario">
+                <form id="formulario" name="formulario" method="get">
+                    <fieldset>
+                        <legend align="center"> <b> Datos </b> </legend>
+                    <tr>
+                        <td><label for="nombre"> Nombre: </label> <input placeholder="Ingrese su nombre aquí..." type="text" name="nombre" id="nombre"><br><br></td>
+                        <td><label for="apellido"> Apellido: </label><input placeholder="Ingrese su apellido aquí..." type="text" name="apellido" id="apellido"><br><br></td>
+                        <td><label for="email"> Email: </label><input placeholder="Ingrese su email aquí..." type="email" name="email" id="email"><br><br></td>
+                        <td><label for="telefono"> Teléfono: </label><input placeholder="Ingrese su teléfono aquí..." type="number" name="telefono" id="telefono" value="telefono"><br><br></td>
+                        <td><label for="inscripto"> Está inscripto ante Aduana como Importador? </label>
+                            <select id="inscripto" name="inscripto" autofocus="true">
+                            <option value ""> -- </option>
+                            <option value="1"> Si </option>
+                            <option value="2"> No </option>
+                            </select></td>
+                    </tr>
+                    </fieldset> 
+                    <br>
+                    <fieldset>
+                        <legend align="center"> <b> Información de la mercadería </b></legend>
+                    <tr>
+                        <textarea placeholder="Agregue información relevante de la mercadería, para su correcta clasificación:
+
+Qué función cumple?
+Dónde se utiliza?
+Material constitutivo?
+Indicar marca, modelo, origen
+
+Adjuntar catálogo del producto" name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                        <br>
+                        <input type="file" name="catalogo" id="catalogo">
+                    </tr>
+                    </fieldset> 
+                    <br>
+                    <fieldset>
+                        <legend align="center"> <b>Preferencia de Envío</b> </legend>
+                            Modalidad: <input type="radio" name="modalidad" id="modalidad" value="Terrestre"> Terrestre  <input type="radio" name="modalidad" id="modalidad" value="Marítimo"> Marítimo <input type="radio" name="modalidad" id="modalidad" value="Aéreo"> Aéreo
+                    </fieldset>
+                    <br>
+                    <br>
+                    <tr>
+                        <td colspan="2" align="center">
+                        <input type="reset" value="Borrar">
+                        <input type="submit" id="btnEnviarFormulario" value="Enviar Solicitud"></td>
+                    </tr>
+                    <br>
+                </form>
+            </div>
         </div>
+        <br>
     </section>
-
-
+   <br> 
     <section id="Contacto">
         <div class="containercontacto">
             <div class="contacto">
@@ -94,7 +142,7 @@
                 <div class="lista">
                 <ul>
                     <li><i class="fa-solid fa-house-user"></i> Perú 457 Piso 6 oficina F, Buenos Aires, Argentina</li>
-                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+5491152630967">+54 11 526309676</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+5491152630967">+54 11 52630967</a></li>
                     <li><i class="fa-solid fa-envelope-circle-check"></i><a href="Mailto:suministros@flankers.com.ar?Subject=Contacto" target="_blank"> Suministros@flankers.com.ar</a></li>
                     <li><a href="https://www.facebook.com/FLANKERS-COMERCIO-EXTERIOR-SA-145536408871507/" target="_blank"> <img src="https://icones.pro/wp-content/uploads/2021/02/facebook-logo-icone-3d.png" alt="Facebook Logo" width="20">   Facebook Page</a></li>
                     <li><a href="https://www.instagram.com/flankers_comercio_exterior/?hl=es-la" target="_blank"> <img src="https://www.orientacionandujar.es/wp-content/uploads/2019/07/07f0d7b69ef071571e4ada2f4d6a053a-icono-de-instagram-colorido.png" alt="Instagram Logo" width="20">   Instagram Page</a></li>
