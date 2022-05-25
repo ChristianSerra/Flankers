@@ -5,73 +5,80 @@ logoElement.addEventListener('click', () => {
     mainMenuElement.classList.toggle('main-menu--show');
 });
 
-(function(){
+        const almacenDatos = {
+    nombre: "",
+    apellido: "",
+    email: "",
+    telefono: "",
+    inscripto: "",
+    comentario: "",
+    modalidad: "",
+}
 
-    const formulario = document.getElementById("formulario")[0],
-    elementos = formulario.elements,
-    boton = document.getElementById("btnEnviarFormulario");
+const inputNombre = document.getElementById("inputNombre")
+const inputApellido = document.getElementById("inputApellido")
+const inputEmail = document.getElementById("inputEmail")
+const inputTelefono = document.getElementById("inputTelefono")
+const inputInscripto = document.getElementById("inputInscripto")
+const inputComentario = document.getElementById("inputComentario")
+const inputModalidad = document.getElementById("inputModalidad")
 
-    const validarNombre = function(e){
-        if (formulario.nombre.value == 0){
-            alert("Complete su nombre");
-            e.preventDefault();
+const submitForm = document.getElementById("btnEnviarFormulario")
+submitForm.addEventListener("click",handleClick)
+
+inputNombre.addEventListener("input",handleChange)
+inputApellido.addEventListener("input",handleChange)
+inputEmail.addEventListener("input",handleChange)
+inputTelefono.addEventListener("input",handleChange)
+inputInscripto.addEventListener("input",handleChange)
+inputComentario.addEventListener("input",handleChange)
+inputModalidad.addEventListener("input",handleChange)
+
+
+
+function handleChange(event){
+    if(event.target.id === "inputNombre"){
+        almacenDatos.nombre = event.target.value
+    }
+    if(event.target.id === "inputApellido"){
+        almacenDatos.apellido = event.target.value
+    }
+    if(event.target.id === "inputEmail"){
+        almacenDatos.email = event.target.value
+    }
+    if(event.target.id === "inputTelefono"){
+        almacenDatos.telefono = event.target.value
+    }
+    if(event.target.id === "inputInscripto"){
+        almacenDatos.inscripto = event.target.value
+    }
+    if(event.target.id === "inputComentario"){
+        almacenDatos.comentario = event.target.value
+    }
+    if(event.target.id === "inputModalidad"){
+        almacenDatos.modalidad = event.target.value
+    }
+}
+
+function handleClick(event){
+    for (const key in almacenDatos){
+        if(!almacenDatos[key]){
+            alert(`Debes rellenar ${key}`)
         }
-    };
+    }
 
-    const validarApellido = function(e){
-        if (formulario.apellido.value == 0){
-            alert("Complete su apellido");
-            e.preventDefault();
-        }
-    };
-
-    const validarEmail = function(e){
-        if (formulario.email.value == 0){
-            alert("Complete su email");
-            e.preventDefault();
-        }
-    };
-
-    const validarTelefono = function(e){
-        if (formulario.telefono.value == 0){
-            alert("Complete su teléfono");
-            e.preventDefault();
-        }
-    };
-
-    const validarInscripto = function(e){
-        if (formulario.inscripto.value == 0){
-            alert("Seleccione una opción");
-            e.preventDefault();
-        }
-    };
+    const $form = document.querySelector("#form")
+    const $buttonMailto = document.querySelector("#envio")
     
-    const validarComentario = function(e){
-        if (formulario.comentario.value == 0){
-            alert("Agregue una descripción válida");
-            e.preventDefault();
-        }
-    };
+    $form.addEventListener("submit", handleSubmit)
+    
+    function handleSubmit(event){
+        event.preventDefault();
+        const form = new FormData(this);
+        console.log(form.get("inputNombre"))
+        $buttonMailto.setAttribute('href', `mailto:suministros@flankers.com.ar?subject= Cotización solicitada por: ${form.get('inputNombre')} - Correo:${form.get('inputEmail')} - Telefono: ${form.get('inputTelefono')}&body= Información de la mercadería a cotizar: ${form.get('inputComentario')} - La modalidad seleccionada para la cotización es vía: ${form.get('inputModalidad')}`)
+        $buttonMailto.click()
+        $form.reset();
+    }
 
-    const validarRadio = function(e){
-        if (formulario.modalidad[0].checked == true ||
-            formulario.modalidad[1].checked == true ||
-            formulario.modalidad[2].checked == true){
-        } else{
-            alert("Indique la modalidad requerida");
-            e.preventDefault();
-        }
-    };
-
-    const validar = function(e){
-        validarNombre(e);
-        validarApellido(e);
-        validarEmail(e);
-        validarTelefono(e);
-        validarInscripto(e);
-        validarComentario(e);
-        validarRadio(e);
-    };
-
-    formulario.addEventListener("submit", validar);
-}())
+}
