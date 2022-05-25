@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Flankers Comercio Exterior S.A.</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="prueba2.css">
 <link rel="icon" href="media/logochico2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,6 @@
                     <li class="menu_item"><a href="http://dux.flankers.com.ar:50850/dux/XZS001P001.aspx"class="main-menu_link" target="_blank">Acceso Web Clientes</a></li>                   
                 </ul>
             </nav>
-            <script src="scripts.js"></script>
         </header>
     </div>
 
@@ -84,16 +83,16 @@
         <div class="container">
             <h2>Cotizá tu envío</h2>
             <div class="containerFormulario">
-                <form id="formulario" name="formulario" method="get">
+                <form action="" id="form" name="form">
                     <fieldset>
                         <legend align="center"> <b> Datos </b> </legend>
                     <tr>
-                        <td><label for="nombre"> Nombre: </label> <input placeholder="Ingrese su nombre aquí..." type="text" name="nombre" id="nombre"><br><br></td>
-                        <td><label for="apellido"> Apellido: </label><input placeholder="Ingrese su apellido aquí..." type="text" name="apellido" id="apellido"><br><br></td>
-                        <td><label for="email"> Email: </label><input placeholder="Ingrese su email aquí..." type="email" name="email" id="email"><br><br></td>
-                        <td><label for="telefono"> Teléfono: </label><input placeholder="Ingrese su teléfono aquí..." type="number" name="telefono" id="telefono" value="telefono"><br><br></td>
+                        <td><label for="nombre"> Nombre: </label> <input placeholder="Ingrese su nombre aquí..." type="text" size="35" name="inputNombre" id="inputNombre"><br><br></td>
+                        <td><label for="apellido"> Apellido: </label><input placeholder="Ingrese su apellido aquí..." type="text" size="35" name="inputApellido" id="inputApellido"><br><br></td>
+                        <td><label for="email"> Email: </label><input placeholder="Ingrese su email aquí..." type="email" size="38" name="inputEmail" id="inputEmail"><br><br></td>
+                        <td><label for="telefono"> Teléfono: </label><input placeholder="Ingrese su teléfono aquí..." type="number" name="inputTelefono" id="inputTelefono" value="telefono" <br><br><br></td>
                         <td><label for="inscripto"> Está inscripto ante Aduana como Importador? </label>
-                            <select id="inscripto" name="inscripto" autofocus="true">
+                            <select id="inputInscripto" name="inputInscripto" autofocus="true">
                             <option value ""> -- </option>
                             <option value="1"> Si </option>
                             <option value="2"> No </option>
@@ -105,13 +104,13 @@
                         <legend align="center"> <b> Información de la mercadería </b></legend>
                     <tr>
                         <textarea placeholder="Agregue información relevante de la mercadería, para su correcta clasificación:
-
 Qué función cumple?
 Dónde se utiliza?
 Material constitutivo?
 Indicar marca, modelo, origen
 
-Adjuntar catálogo del producto" name="comentario" id="comentario" cols="30" rows="10"></textarea>
+
+Adjuntar catálogo del producto" name="inputComentario" id="inputComentario" cols="30" rows="10"></textarea>
                         <br>
                         <input type="file" name="catalogo" id="catalogo">
                     </tr>
@@ -119,22 +118,23 @@ Adjuntar catálogo del producto" name="comentario" id="comentario" cols="30" row
                     <br>
                     <fieldset>
                         <legend align="center"> <b>Preferencia de Envío</b> </legend>
-                            Modalidad: <input type="radio" name="modalidad" id="modalidad" value="Terrestre"> Terrestre  <input type="radio" name="modalidad" id="modalidad" value="Marítimo"> Marítimo <input type="radio" name="modalidad" id="modalidad" value="Aéreo"> Aéreo
+                            Modalidad: <input type="radio" name="inputModalidad" id="inputModalidad" value="Terrestre"> Terrestre  <input type="radio" name="modalidad" id="inputModalidad" value="Marítimo"> Marítimo <input type="radio" name="modalidad" id="inputModalidad" value="Aéreo"> Aéreo
                     </fieldset>
                     <br>
                     <br>
                     <tr>
                         <td colspan="2" align="center">
                         <input type="reset" value="Borrar">
-                        <input type="submit" id="btnEnviarFormulario" value="Enviar Solicitud"></td>
+                        <button type="submit" id="btnEnviarFormulario">Enviar Solicitud</button></td>
                     </tr>
-                    <br>
-                </form>
+                <br>
+            </form>
+            <a href="mailto:suministros@flankers.com.ar" id="envio">Mail</a>
             </div>
         </div>
         <br>
     </section>
-   <br> 
+        <br> 
     <section id="Contacto">
         <div class="containercontacto">
             <div class="contacto">
@@ -161,5 +161,6 @@ Adjuntar catálogo del producto" name="comentario" id="comentario" cols="30" row
             <p>&copy; Flankers Comercio Exterior S.A. 2022</p>
         </div>
     </footer>
+    <script src="./scripts.js" type="module"></script>
 </body>
 </html>
