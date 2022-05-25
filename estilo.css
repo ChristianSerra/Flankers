@@ -54,7 +54,7 @@ img{
 .toggle-menu{
     height: 40px;
     right: 1.5em;
-    top: 1.5em;
+    top: 1em;
     position: absolute;
     cursor: pointer;
     z-index: 1;
@@ -92,7 +92,7 @@ transform: translateY(-100%);
 }
 
 li a{
-    padding: 5px 12px;
+    padding: 2px;
     text-decoration: none;
     font-weight: bold;
     color:rgb(50, 119, 248);
@@ -278,11 +278,6 @@ background-color: rgb(25, 25, 25);
 
     #Hero h2{
         font-size: 2.7em;
-    }
-
-    #Nuestros-servicios .programas{
-        display: flex;
-        justify-content: center;
     }
 
     #Nuestros-servicios p{
