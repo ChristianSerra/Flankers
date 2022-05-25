@@ -203,6 +203,21 @@ padding: 100px 12px;
     text-align: center;
     }
 
+#envio{
+    opacity: 0;
+}
+
+textarea{
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+#inputTelefono{
+    width: 255px;
+}
+
 #datos{
     height: 100%;
 }
