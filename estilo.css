@@ -46,7 +46,6 @@ margin: auto;
 flex-direction: column;
 }
 
-
 img{
     height: 100%;
 }
@@ -109,8 +108,7 @@ align-items: center;
 justify-content: center;
 text-align: center;
 flex-direction: column;
-height: 65vh;
-padding: 100px 12px;
+height: 90vh;
 background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.5),
@@ -245,9 +243,9 @@ padding: 100px 12px;
     height: 100%;
 }
 
-.containercontacto{
+
+#Contacto{
     text-align: center;
-    margin: auto;
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.6),
@@ -257,7 +255,7 @@ padding: 100px 12px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    }
+}
 
 .contacto{
     text-align: center;
@@ -308,15 +306,15 @@ background-color: rgb(25, 25, 25);
         margin-bottom: 30px;
     }
 
-    #Nuestros-servicios h2{
+    #Nuestros-servicios h3{
         margin-top: 0;
     }
-
 
     #Nuestros-servicios .carta{
         padding: 50px;
         background-size: cover;
         background-repeat: no-repeat;
+        background-position-y: 0;
     }
 
     .carta:first-child{
