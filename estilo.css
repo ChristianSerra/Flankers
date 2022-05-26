@@ -46,6 +46,7 @@ margin: auto;
 flex-direction: column;
 }
 
+
 img{
     height: 100%;
 }
@@ -76,7 +77,7 @@ display: flex;
 flex-direction: column;
 text-align: center;
 transition: transform 0.3s;
-transform: translateY(-100%);
+transform: translateY(-110%);
 }
 
 .main-nav{
@@ -108,7 +109,8 @@ align-items: center;
 justify-content: center;
 text-align: center;
 flex-direction: column;
-height: 90vh;
+height: 65vh;
+padding: 100px 12px;
 background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.5),
@@ -238,24 +240,14 @@ padding: 100px 12px;
     opacity: 0;
 }
 
-textarea{
-    min-width: 500px;
-    max-width: 500px;
-    min-height: 100px;
-    max-height: 200px;
-}
-
-#inputTelefono{
-    width: 255px;
-}
 
 #datos{
     height: 100%;
 }
 
-
-#Contacto{
+.containercontacto{
     text-align: center;
+    margin: auto;
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.6),
@@ -265,7 +257,7 @@ textarea{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
+    }
 
 .contacto{
     text-align: center;
@@ -316,15 +308,15 @@ background-color: rgb(25, 25, 25);
         margin-bottom: 30px;
     }
 
-    #Nuestros-servicios h3{
+    #Nuestros-servicios h2{
         margin-top: 0;
     }
+
 
     #Nuestros-servicios .carta{
         padding: 50px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position-y: 0;
     }
 
     .carta:first-child{
