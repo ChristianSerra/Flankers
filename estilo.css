@@ -17,14 +17,14 @@ h1{
     font-size: 3,5em;
 }
 h2{
-    font-size: 2.7em;
+    font-size: 2em;
 }
 h3{
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
 p{
-    font-size: 15px;
+    font-size: 12px;
 }
 ul{
     list-style: none;
@@ -298,16 +298,22 @@ background-color: rgb(25, 25, 25);
 }
 
     #Hero h2{
-        font-size: 2.7em;
+        font-size: 2.3em;
+    }
+
+    #Quienessomos p{
+        font-size: 15px;
     }
 
     #Nuestros-servicios p{
         display: block;
         margin-bottom: 30px;
+        font-size: 15px;
     }
 
-    #Nuestros-servicios h3{
+    #Nuestros-servicios h2{
         margin-top: 0;
+        font-size: 2em;
     }
 
     #Nuestros-servicios .carta{
@@ -384,4 +390,28 @@ background-color: rgb(25, 25, 25);
     text-align: center;
 }
 
+@media (min-width: 1000px){
+
+    
+        #Hero h2{
+            font-size: 3.1em;
+        }
+    
+        #Quienessomos p{
+            font-size: 21px;
+        }
+    
+        #Nuestros-servicios p{
+            display: block;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+    
+        #Nuestros-servicios h2{
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+    }
+    
 }
